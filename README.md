@@ -1,1 +1,31 @@
 # resetarRede
+
+
+arp -d * 
+nbtstat -R 
+nbtstat -RR 
+ipconfig /flushdns 
+ipconfig /registerdns 
+ipconfig /release 
+ipconfig /renew
+netsh winsock reset 
+netsh winhttp reset proxy 
+netsh winsock reset catalog 
+netsh winsock reset all 
+netsh interface ip delete arpcache 
+netsh advfirewall reset 
+netsh branchcache reset 
+netsh int ip reset all 
+netsh int ip reset c:\Temp\resetlog.txt 
+netsh int ipv4 reset all 
+netsh int ipv6 reset all 
+netsh int ip reset all 
+netsh int httpstunnel reset all 
+netsh int isatap reset all 
+netsh int portproxy reset all 
+netsh int tcp reset all 
+netsh int teredo reset all 
+net localgroup administradores localservice /add 
+fsutil resource setautoreset true C:\ 
+netsh winhttp import proxy source=ie
+REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyEnable /t REG_DWORD /d 0 /f
